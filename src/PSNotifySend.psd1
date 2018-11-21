@@ -30,7 +30,7 @@ CompanyName = 'tyler'
 Copyright = '(c) tyler. All rights reserved.'
 
 # Description of the functionality provided by this module
-# Description = ''
+Description = 'A notify-send wrapper that allows triggering notifications on Linux!'
 
 # Minimum version of the PowerShell engine required by this module
 PowerShellVersion = '6.0'
@@ -69,25 +69,16 @@ PowerShellVersion = '6.0'
 # NestedModules = @()
 
 # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
-FunctionsToExport = '*'
+FunctionsToExport = 'Send-PSNotification'
 
 # Cmdlets to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no cmdlets to export.
-CmdletsToExport = '*'
+CmdletsToExport = ''
 
 # Variables to export from this module
 VariablesToExport = '*'
 
 # Aliases to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no aliases to export.
-AliasesToExport = '*'
-
-# DSC resources to export from this module
-# DscResourcesToExport = @()
-
-# List of all modules packaged with this module
-# ModuleList = @()
-
-# List of all files packaged with this module
-# FileList = @()
+AliasesToExport = ''
 
 # Private data to pass to the module specified in RootModule/ModuleToProcess. This may also contain a PSData hashtable with additional module metadata used by PowerShell.
 PrivateData = @{
@@ -95,23 +86,26 @@ PrivateData = @{
     PSData = @{
 
         # Tags applied to this module. These help with module discovery in online galleries.
-        # Tags = @()
+        Tags = @('pscore', 'linux', 'notification', 'toast', 'notify-send')
 
         # A URL to the license for this module.
-        # LicenseUri = ''
+        LicenseUri = 'https://github.com/TylerLeonhardt/PSNotifySend/blob/master/LICENSE'
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/TylerLeonhardt/PSNotifySend'
 
         # A URL to an icon representing this module.
         # IconUri = ''
 
         # ReleaseNotes of this module
-        # ReleaseNotes = ''
+        ReleaseNotes = '# 0.1.0
 
-    } # End of PSData hashtable
+Initial Release.
+'
 
-} # End of PrivateData hashtable
+    }
+
+}
 
 # HelpInfo URI of this module
 # HelpInfoURI = ''

@@ -37,14 +37,9 @@ Send-PSNotification 'Hello World' -Icon my-icon
 
 .NOTES
 Not all linux distros support ExpireTime. They will fire the notification for a constant duration regardless of what is set.
-
-.NOTES
-Not all linux distros support passing a path in for Icon. They will show nothing if not supported.
-Best practice is to put the icon file in $HOME/.local/share/icons and then specify the name of the file:
--Icon my-icon
-
-.NOTES
+Not all linux distros support passing a path in for Icon. They will show nothing if not supported. Best practice is to put the icon file in $HOME/.local/share/icons and then specify the name of the file: -Icon my-icon
 Not all linux distros support Category. They will show nothing if not supported.
+
 #>
 function Send-PSNotification {
     [cmdletbinding(SupportsShouldProcess=$true)]
