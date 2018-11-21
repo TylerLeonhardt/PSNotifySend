@@ -1,8 +1,10 @@
 # PSNotifySend
 
+[![PowerShell Gallery](https://img.shields.io/powershellgallery/v/PSNotifySend.svg?style=for-the-badge)](https://www.powershellgallery.com/packages/PSNotifySend)
+
 A notify-send wrapper that allows triggering notifications on Linux!
 
-Install via the Gallery
+Install via the [PowerShell Gallery](https://www.powershellgallery.com/packages/PSNotifySend):
 ```powershell
 Install-Module PSNotifySend
 ```
