@@ -1,5 +1,6 @@
 # PSNotifySend
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1a9712c50f4848c287ef6608c840d259)](https://app.codacy.com/app/TylerLeonhardt/PSNotifySend?utm_source=github.com&utm_medium=referral&utm_content=TylerLeonhardt/PSNotifySend&utm_campaign=Badge_Grade_Dashboard)
 [![PowerShell Gallery](https://img.shields.io/powershellgallery/v/PSNotifySend.svg?style=for-the-badge)](https://www.powershellgallery.com/packages/PSNotifySend)
 
 A notify-send wrapper that allows triggering notifications on Linux!
