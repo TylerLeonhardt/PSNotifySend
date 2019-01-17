@@ -67,7 +67,11 @@ function Send-PSNotification {
         "presence","presence.offline","presence.online",
         "transfer","transfer.complete","transfer.error")]
         [string[]]
-        $Category
+        $Category,
+
+        [string]
+        [ValidateNotNullOrEmpty()]
+        $SoundFile
     )
     begin {
         $notifySendArgs = @()
@@ -89,6 +93,10 @@ function Send-PSNotification {
 
         if ($Catagory) {
             $notifySendArgs += "--category=$($Catagory -join ',')"
+        }
+
+        if ($SoundFile) {
+            $notifySendArgs += "--hint=string:sound-file:$SoundFile"
         }
 
         $notifySendArgs += $Summary
