@@ -12,7 +12,7 @@
 RootModule = 'PSNotifySend.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.1.0'
+ModuleVersion = '0.2.0'
 
 # Supported PSEditions
 CompatiblePSEditions = @('Core')
@@ -98,7 +98,12 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '# 0.1.0
+        ReleaseNotes = '# 0.2.0
+
+Add `-SoundFile`
+Fixes `-Category`
+
+# 0.1.0
 
 Initial Release.
 '
