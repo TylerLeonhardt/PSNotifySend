@@ -23,6 +23,9 @@ Specifies an icon filename or stock icon to display.
 .PARAMETER Category
 Specifies the notification category.
 
+.PARAMETER SoundFile
+Specifies the sound file to run when notification is fired.
+
 .EXAMPLE
 Send-PSNotification 'Hello World'
 
