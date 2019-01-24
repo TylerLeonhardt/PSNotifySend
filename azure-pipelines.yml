@@ -10,7 +10,7 @@ pool:
   vmImage: 'Ubuntu-16.04'
 
 steps:
-- pwsh: Install-Module Pester -Scope CurrentUser
+- pwsh: Install-Module Pester -Scope CurrentUser -Force
   displayName: 'Install Pester'
 
 - pwsh: ./build.ps1 -Test
