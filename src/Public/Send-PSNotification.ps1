@@ -67,29 +67,37 @@ function Send-PSNotification {
         "presence","presence.offline","presence.online",
         "transfer","transfer.complete","transfer.error")]
         [string[]]
-        $Category
+        $Category,
+
+        [string]
+        [ValidateNotNullOrEmpty()]
+        $SoundFile
     )
     begin {
-        $notifySendArgs = @()
-
-        if ($Urgency) {
-            $notifySendArgs += "--urgency=$Urgency"
-        }
-
-        if ($ExpireTime) {
-            $notifySendArgs += "--expire-time=$ExpireTime"
-        }
-
-        if ($Icon) {
-            if ($Icon -eq "powershell-logo") {
-                Add-DefaultPSIcon
+        $notifySendArgs = @(
+            if ($Urgency) {
+                "--urgency=$Urgency"
             }
-            $notifySendArgs += "--icon=$($Icon -join ',')"
-        }
 
-        if ($Catagory) {
-            $notifySendArgs += "--category=$($Catagory -join ',')"
-        }
+            if ($ExpireTime) {
+                "--expire-time=$ExpireTime"
+            }
+
+            if ($Category) {
+                "--category=$($Category -join ',')"
+            }
+
+            if ($SoundFile) {
+                "--hint=string:sound-file:$SoundFile"
+            }
+
+            if ($Icon) {
+                if ($Icon -eq "powershell-logo") {
+                    Add-DefaultPSIcon
+                }
+                "--icon=$($Icon -join ',')"
+            }
+        )
 
         $notifySendArgs += $Summary
         $notifySendArgs += ""
