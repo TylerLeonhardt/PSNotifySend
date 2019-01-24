@@ -22,7 +22,7 @@ Describe "Notification WhatIf tests" {
                 Stop-Transcript
             }
 
-            $log = Get-Content tmp.log | Where-Object { $_ -match "What if: Performing the operation" }
+            $log = Get-Content tmp.log | Where-Object { $_ -match "What if: Performing the operation `"Send-PSNotification`"" }
             Remove-Item tmp.log
 
             $expected = 'What if: Performing the operation "Send-PSNotification" on target "notify-send --icon=powershell-logo PowerShell Notification Hello World".'
