@@ -57,7 +57,7 @@ elseif (hasMissingTools) {
 }
 else {
     if ($Test) {
-        Push-Location $PSScriptRoot\Tests
+        Push-Location $PSScriptRoot\test
         $res = Invoke-Pester -OutputFormat NUnitXml -OutputFile TestsResults.xml -PassThru
         if ($env:APPVEYOR) {
             (New-Object System.Net.WebClient).UploadFile("https://ci.appveyor.com/api/testresults/nunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\TestsResults.xml));
