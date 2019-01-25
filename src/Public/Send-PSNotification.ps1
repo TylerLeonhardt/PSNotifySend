@@ -100,10 +100,12 @@ function Send-PSNotification {
                 }
                 "--icon=$($Icon -join ',')"
             }
-        )
 
-        $notifySendArgs += $Summary
-        $notifySendArgs += ""
+            $Summary
+
+            # To be filled with the body later
+            ""
+        )
     }
 
     process {
