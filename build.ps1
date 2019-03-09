@@ -77,6 +77,7 @@ else {
         Copy-Item -Path "$PSScriptRoot\src\PSNotifySend.ps*1" -Destination "$PSScriptRoot\out\PSNotifySend\" -Force
         Copy-Item -Path "$PSScriptRoot\README.md" -Destination "$PSScriptRoot\out\PSNotifySend\" -Force
         Copy-Item -Path "$PSScriptRoot\LICENSE" -Destination "$PSScriptRoot\out\PSNotifySend\" -Force
+        Copy-Item -Path "$PSScriptRoot\src\powershell-logo.png" -Destination "$PSScriptRoot\out\PSNotifySend\" -Force
         Copy-Item -Path "$PSScriptRoot\src\Public" -Destination "$PSScriptRoot\out\PSNotifySend\" -Force -Recurse
         Copy-Item -Path "$PSScriptRoot\src\Private" -Destination "$PSScriptRoot\out\PSNotifySend\" -Force -Recurse
     }
