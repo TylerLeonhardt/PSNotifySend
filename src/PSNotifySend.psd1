@@ -12,7 +12,7 @@
 RootModule = 'PSNotifySend.psm1'
 
 # Version number of this module.
-ModuleVersion = '0.2.0'
+ModuleVersion = '0.2.1'
 
 # Supported PSEditions
 CompatiblePSEditions = @('Core')
@@ -98,7 +98,11 @@ PrivateData = @{
         # IconUri = ''
 
         # ReleaseNotes of this module
-        ReleaseNotes = '# 0.2.0
+        ReleaseNotes = '# 0.2.1
+
+Minor fix that actually includes the powershell-logo.png file with the module
+
+# 0.2.0
 
 Add `-SoundFile`
 Fixes `-Category`
