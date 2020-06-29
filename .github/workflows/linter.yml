@@ -2,9 +2,9 @@ name: Linter
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
@@ -12,6 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Super Duper Linter
-      uses: JustinGrote/Super-Duper-Linter@preview
+      - uses: actions/checkout@v2
+      - name: Super Duper Linter
+        uses: JustinGrote/Super-Duper-Linter@preview
